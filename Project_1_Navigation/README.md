@@ -42,6 +42,7 @@ Follow the instructions in `Navigation.ipynb` to get started with training your 
 # To know:
 All the documentation is written in: Navigation.ipynb *(.html)*  
 Basically, the project starts at part 4 in the notebook. (Therefor you can skip the first 9 cells).
+If you would like to reproduce this experiment, you just have to run the notebook from top till bottom
 
 Documentation: *Navigation.ipynb* + in the classes
 
