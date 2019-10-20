@@ -40,6 +40,10 @@ Follow the instructions in `Navigation.ipynb` to get started with training your 
 
 
 # To know:
+All the documentation is written in: Navigation.ipynb *(.html)*  
+Basically, the project starts at part 4 in the notebook. (Therefor you can skip the first 9 cells).
+
+Documentation: *Navigation.ipynb* + in the classes
 
 Folder structure
  - model
@@ -50,7 +54,7 @@ Folder structure
    - replayBuffer
      - queue  
  - logs:
-   - Contains the intermediate results of the model during training + a list of all the *hyper parameters*
+   - Contains the intermediate results of the model during training + a list of all the **hyper parameters**
  - results:
    - txt file: a copy of the log
    - csv file: a list with the score
