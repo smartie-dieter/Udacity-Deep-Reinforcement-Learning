@@ -1,2 +1,3 @@
 # Udacity-Deep-Reinforcement-Learning
-This report contains the projects which were required for the Undacities Deep Reinforcement Learning course
+This repo contains the projects which were required for the Undacities Deep Reinforcement Learning course.
+- Project 1: Navigation
