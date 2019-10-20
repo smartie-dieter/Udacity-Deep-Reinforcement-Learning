@@ -43,16 +43,16 @@ Follow the instructions in `Navigation.ipynb` to get started with training your 
 
 Folder structure
  - model
-  - agent
-  - neural nets:
-   - qNetwork
-   - duelingQNetwork
-  - replayBuffer
-   - queue  
+   - agent
+   - neural nets:
+     - qNetwork
+     - duelingQNetwork
+   - replayBuffer
+     - queue  
  - logs:
-  - Contains the intermediate results of the model during training + a list of all the *hyper parameters*
+   - Contains the intermediate results of the model during training + a list of all the *hyper parameters*
  - results:
-  - txt file: a copy of the log
-  - csv file: a list with the score
+   - txt file: a copy of the log
+   - csv file: a list with the score
  - model_checkpoints
-  - the weights of the model
+   - the weights of the model
