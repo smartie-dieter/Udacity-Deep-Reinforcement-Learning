@@ -67,11 +67,11 @@ Folder structure
 In this blog, you can find some nifty ideas for improving the model
 [https://medium.com/intelligentunit/conquering-openai-retro-contest-2-demystifying-rainbow-baseline-9d8dd258e74b](https://medium.com/intelligentunit/conquering-openai-retro-contest-2-demystifying-rainbow-baseline-9d8dd258e74b)
 
-**Possible improvements:*
+**Possible improvements:**
  - Distributional RL
    - Instead of using average Q values, we can make use of a distribution of Q values
  - Noisy Nets
  - Implementation of Rainbow
  
-** Another approach**
+**A nother approach**
  - Raw pixel implementation 
