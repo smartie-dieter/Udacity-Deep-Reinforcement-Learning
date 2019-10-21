@@ -61,3 +61,17 @@ Folder structure
    - csv file: a list with the score
  - model_checkpoints
    - the weights of the model
+
+
+# Future work and ideas:
+In this blog, you can find some nifty ideas for improving the model
+[https://medium.com/intelligentunit/conquering-openai-retro-contest-2-demystifying-rainbow-baseline-9d8dd258e74b](https://medium.com/intelligentunit/conquering-openai-retro-contest-2-demystifying-rainbow-baseline-9d8dd258e74b)
+
+**Possible improvements:*
+ - Distributional RL
+   - Instead of using average Q values, we can make use of a distribution of Q values
+ - Noisy Nets
+ - Implementation of Rainbow
+ 
+** Another approach**
+ - Raw pixel implementation 
