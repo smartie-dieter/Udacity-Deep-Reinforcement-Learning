@@ -70,7 +70,8 @@ In this blog, you can find some nifty ideas for improving the model
 **Possible improvements:**
  - Distributional RL
    - Instead of using average Q values, we can make use of a distribution of Q values
- - Noisy Nets
+ - Noisy Nets 
+   - Should solve the artifical epsilon parameter
  - Implementation of Rainbow
  
 **A nother approach**
