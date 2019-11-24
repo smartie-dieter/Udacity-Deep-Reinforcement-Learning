@@ -271,7 +271,7 @@ th {
 @font-face {
   font-family: 'Glyphicons Halflings';
   src: url('../components/bootstrap/fonts/glyphicons-halflings-regular.eot');
-  src: url('../components/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../components/bootstrap/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../components/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../components/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../components/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+  src: url('../components/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../components/bootstrap/fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../components/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../components/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../components/bootstrap/fonts/glyphicons-halflings-regular.png#glyphicons_halflingsregular') format('svg');
 }
 .glyphicon {
   position: relative;
@@ -6756,7 +6756,7 @@ button.close {
 @font-face {
   font-family: 'FontAwesome';
   src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0');
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.png?v=4.7.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -13942,29 +13942,29 @@ In this project we've to train an agent to move a double-jointed arm to a desire
 5) Store the rewards and go to step 2 or quite when an agents is done :)</p>
 <h2 id="Actor">Actor<a class="anchor-link" href="#Actor">&#182;</a></h2><p>The Actor maps each state of the environment to an action, which is a vector of four numbers between -1 and +1. The network consists of three fully-connected linear layers with ReLU activation functions. The output layer uses the tanh activation function to produce values between -1 and +1 for each of the four outputs.</p>
 <p>The task of the actor is to approximate the optimal policiy, deterministically. This means that we always want to output the best believed action for any given state.</p>
-<p><img src="images/nn_actor.svg" alt=""></p>
-<h2 id="Cretic">Cretic<a class="anchor-link" href="#Cretic">&#182;</a></h2><p>The Critic maps a state and action to a Q-value, which reflects the estimated quality of the given action in the given state. The network consists of three fully-connected linear layers with ReLU activation functions. The output layer produces the estimated value of the given action in the given state.</p>
-<p>The task of the Cretic here is to approximate the maximizer over the Q values of the next state and not as a learned baseline.<br>
-The Cretic learns to evaluate the optimal value function by using the actors best believe action.</p>
-<p><img src="images/nn_critic.svg" alt=""></p>
+<p><img src="images/nn_actor.png" alt=""></p>
+<h2 id="Critic">Critic<a class="anchor-link" href="#Critic">&#182;</a></h2><p>The Critic maps a state and action to a Q-value, which reflects the estimated quality of the given action in the given state. The network consists of three fully-connected linear layers with ReLU activation functions. The output layer produces the estimated value of the given action in the given state.</p>
+<p>The task of the Critic here is to approximate the maximizer over the Q values of the next state and not as a learned baseline.<br>
+The Critic learns to evaluate the optimal value function by using the actors best believe action.</p>
+<p><img src="images/nn_critic.png" alt=""></p>
 <h3 id="learn">learn<a class="anchor-link" href="#learn">&#182;</a></h3><p><strong>4 networks</strong></p>
 <ul>
 <li>actor_local   </li>
 <li><p>actor_target</p>
 </li>
-<li><p>cretic_local</p>
+<li><p>critic_local</p>
 </li>
-<li>cretic_target  </li>
+<li>critic_target  </li>
 </ul>
 <p><strong>Gradient descent networks</strong></p>
 <ul>
 <li>actor_local</li>
-<li>cretic_local</li>
+<li>critic_local</li>
 </ul>
 <p><strong>Slow update networks, via Tau</strong></p>
 <ul>
 <li>actor_target</li>
-<li>cretic_target</li>
+<li>critic_target</li>
 </ul>
 <p><strong>Network which decides the next step</strong></p>
 <ul>
@@ -13978,7 +13978,7 @@ The Cretic learns to evaluate the optimal value function by using the actors bes
         <span class="c1"># Unpack a single batch </span>
         <span class="n">states</span><span class="p">,</span> <span class="n">actions</span><span class="p">,</span> <span class="n">rewards</span><span class="p">,</span> <span class="n">next_states</span><span class="p">,</span> <span class="n">dones</span> <span class="o">=</span> <span class="n">experiences</span>
 </pre></div>
-<p>Calculate the Q-target. This is done via the <strong>target</strong>-actor-network and <strong>target</strong>-cretic-network whereby we feed the outcome of the <strong>target</strong>-actor-network in the <strong>target</strong>-cretic-network, which results in a <strong>Q-target-next</strong> value.</p>
+<p>Calculate the Q-target. This is done via the <strong>target</strong>-actor-network and <strong>target</strong>-critic-network whereby we feed the outcome of the <strong>target</strong>-actor-network in the <strong>target</strong>-critic-network, which results in a <strong>Q-target-next</strong> value.</p>
 <p>Via the the <strong>Q-target-next</strong> value, we can calculate the <strong>Q-target</strong>.</p>
 <div class="highlight"><pre><span></span><span class="c1"># ---------------------------- update critic ---------------------------- #</span>
         <span class="c1"># Get predicted next-state actions and Q values from target models</span>
@@ -13988,12 +13988,12 @@ The Cretic learns to evaluate the optimal value function by using the actors bes
         <span class="c1"># Compute Q targets for current states (y_i)</span>
         <span class="n">Q_targets</span> <span class="o">=</span> <span class="n">rewards</span> <span class="o">+</span> <span class="p">(</span><span class="n">gamma</span> <span class="o">*</span> <span class="n">Q_targets_next</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">dones</span><span class="p">))</span>
 </pre></div>
-<p>Use the <strong>cretic_local</strong>-network with the <strong>state</strong> and <strong>action</strong> to calculate the MSE loss, with the <strong>Q-target</strong> (which were more based on the <strong>Next-state</strong>.</p>
+<p>Use the <strong>critic_local</strong>-network with the <strong>state</strong> and <strong>action</strong> to calculate the MSE loss, with the <strong>Q-target</strong> (which were more based on the <strong>Next-state</strong>.</p>
 <div class="highlight"><pre><span></span><span class="c1"># Compute critic loss</span>
         <span class="n">Q_expected</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">critic_local</span><span class="p">(</span><span class="n">states</span><span class="p">,</span> <span class="n">actions</span><span class="p">)</span>
         <span class="n">critic_loss</span> <span class="o">=</span> <span class="n">F</span><span class="o">.</span><span class="n">mse_loss</span><span class="p">(</span><span class="n">Q_expected</span><span class="p">,</span> <span class="n">Q_targets</span><span class="p">)</span>
 </pre></div>
-<p>Perform the gradient descent on the <strong>cretic-local-network</strong></p>
+<p>Perform the gradient descent on the <strong>critic-local-network</strong></p>
 <div class="highlight"><pre><span></span><span class="c1"># Minimize the loss</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">critic_optimizer</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
         <span class="n">critic_loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
@@ -17394,8 +17394,8 @@ INFO:wandb.run_manager:file/dir modified: /home/workspace/wandb/run-20191123_174
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Mean-score">Mean score<a class="anchor-link" href="#Mean-score">&#182;</a></h3><p><img src="images/wandb_chart_24-11-2019_15_19_05.svg" alt=""></p>
-<h3 id="Average-score">Average score<a class="anchor-link" href="#Average-score">&#182;</a></h3><p><img src="images/WandB_Chart_24-11-2019_16_23_01.svg" alt=""></p>
+<h3 id="Mean-score">Mean score<a class="anchor-link" href="#Mean-score">&#182;</a></h3><p><img src="images/wandb_chart_24-11-2019_15_19_05.png" alt=""></p>
+<h3 id="Average-score">Average score<a class="anchor-link" href="#Average-score">&#182;</a></h3><p><img src="images/WandB_Chart_24-11-2019_16_23_01.png" alt=""></p>
 <h1 id="Evaluation">Evaluation<a class="anchor-link" href="#Evaluation">&#182;</a></h1><p>The hyperparameters are very fragile (see the weights and biases report),<br>
 changing them a tiny bit can already immediately make a big difference.</p>
 <p>E.g. agent: breezy-fire-14 contains 2 hidden layers with size: 384 - 256  - does not lean<br>
