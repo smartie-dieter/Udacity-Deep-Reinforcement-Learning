@@ -1,0 +1,81 @@
+wandb_version: 1
+
+ACTION_SIZE:
+  desc: null
+  value: 4
+BATCH_SIZE:
+  desc: null
+  value: 512
+BUFFER_SIZE:
+  desc: null
+  value: 100000
+GAMMA:
+  desc: null
+  value: 0.99
+LEARN_INTERVAL:
+  desc: null
+  value: 6
+LEARN_NUM:
+  desc: null
+  value: 2
+LR_ACTOR:
+  desc: null
+  value: 0.001
+LR_CRITIC:
+  desc: null
+  value: 0.001
+NUM_AGENTS:
+  desc: null
+  value: 20
+STATE_SIZE:
+  desc: null
+  value: 33
+TAU:
+  desc: null
+  value: 0.0015
+WEIGHT_DECAY:
+  desc: null
+  value: 0
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.8.16
+    is_jupyter_run: true
+    python_version: 3.6.3
+actor_local:
+  desc: null
+  value: "Actor(\n  (fc1): Linear(in_features=33, out_features=400, bias=True)\n \
+    \ (fc2): Linear(in_features=400, out_features=300, bias=True)\n  (fc3): Linear(in_features=300,\
+    \ out_features=4, bias=True)\n)"
+actor_optimizer:
+  desc: null
+  value: "Adam (\nParameter Group 0\n    amsgrad: False\n    betas: (0.9, 0.999)\n\
+    \    eps: 1e-08\n    lr: 0.001\n    weight_decay: 0\n)"
+actor_target:
+  desc: null
+  value: "Actor(\n  (fc1): Linear(in_features=33, out_features=400, bias=True)\n \
+    \ (fc2): Linear(in_features=400, out_features=300, bias=True)\n  (fc3): Linear(in_features=300,\
+    \ out_features=4, bias=True)\n)"
+critic_local:
+  desc: null
+  value: "Critic(\n  (fc1): Linear(in_features=33, out_features=400, bias=True)\n\
+    \  (fc2): Linear(in_features=404, out_features=300, bias=True)\n  (fc3): Linear(in_features=300,\
+    \ out_features=1, bias=True)\n)"
+critic_optimizer:
+  desc: null
+  value: "Adam (\nParameter Group 0\n    amsgrad: False\n    betas: (0.9, 0.999)\n\
+    \    eps: 1e-08\n    lr: 0.001\n    weight_decay: 0\n)"
+critic_target:
+  desc: null
+  value: "Critic(\n  (fc1): Linear(in_features=33, out_features=400, bias=True)\n\
+    \  (fc2): Linear(in_features=404, out_features=300, bias=True)\n  (fc3): Linear(in_features=300,\
+    \ out_features=1, bias=True)\n)"
+memory:
+  desc: null
+  value: <files.replayBuffer.ReplayBuffer object at 0x7fa91e34ce10>
+noise:
+  desc: null
+  value: <ouNoise.OUNoise object at 0x7fa91e34cdd8>
+seed:
+  desc: null
+  value: null

@@ -1,0 +1,198 @@
+{
+    "graph_1": {
+        "_type": "graph",
+        "format": "torch",
+        "nodes": [
+            {
+                "name": "fc1",
+                "id": 140705411292464,
+                "class_name": "Linear(in_features=33, out_features=400, bias=True)",
+                "parameters": [
+                    [
+                        "weight",
+                        [
+                            400,
+                            33
+                        ]
+                    ],
+                    [
+                        "bias",
+                        [
+                            400
+                        ]
+                    ]
+                ],
+                "output_shape": [
+                    [
+                        512,
+                        400
+                    ]
+                ],
+                "num_parameters": [
+                    13200,
+                    400
+                ]
+            },
+            {
+                "name": "fc2",
+                "id": 140705411292520,
+                "class_name": "Linear(in_features=404, out_features=300, bias=True)",
+                "parameters": [
+                    [
+                        "weight",
+                        [
+                            300,
+                            404
+                        ]
+                    ],
+                    [
+                        "bias",
+                        [
+                            300
+                        ]
+                    ]
+                ],
+                "output_shape": [
+                    [
+                        512,
+                        300
+                    ]
+                ],
+                "num_parameters": [
+                    121200,
+                    300
+                ]
+            },
+            {
+                "name": "fc3",
+                "id": 140705411292576,
+                "class_name": "Linear(in_features=300, out_features=1, bias=True)",
+                "parameters": [
+                    [
+                        "weight",
+                        [
+                            1,
+                            300
+                        ]
+                    ],
+                    [
+                        "bias",
+                        [
+                            1
+                        ]
+                    ]
+                ],
+                "output_shape": [
+                    [
+                        512,
+                        1
+                    ]
+                ],
+                "num_parameters": [
+                    300,
+                    1
+                ]
+            }
+        ],
+        "edges": []
+    },
+    "graph_0": {
+        "_type": "graph",
+        "format": "torch",
+        "nodes": [
+            {
+                "name": "fc1",
+                "id": 140705411290728,
+                "class_name": "Linear(in_features=33, out_features=400, bias=True)",
+                "parameters": [
+                    [
+                        "weight",
+                        [
+                            400,
+                            33
+                        ]
+                    ],
+                    [
+                        "bias",
+                        [
+                            400
+                        ]
+                    ]
+                ],
+                "output_shape": [
+                    [
+                        400
+                    ]
+                ],
+                "num_parameters": [
+                    13200,
+                    400
+                ]
+            },
+            {
+                "name": "fc2",
+                "id": 140705411292072,
+                "class_name": "Linear(in_features=400, out_features=300, bias=True)",
+                "parameters": [
+                    [
+                        "weight",
+                        [
+                            300,
+                            400
+                        ]
+                    ],
+                    [
+                        "bias",
+                        [
+                            300
+                        ]
+                    ]
+                ],
+                "output_shape": [
+                    [
+                        300
+                    ]
+                ],
+                "num_parameters": [
+                    120000,
+                    300
+                ]
+            },
+            {
+                "name": "fc3",
+                "id": 140705411290784,
+                "class_name": "Linear(in_features=300, out_features=4, bias=True)",
+                "parameters": [
+                    [
+                        "weight",
+                        [
+                            4,
+                            300
+                        ]
+                    ],
+                    [
+                        "bias",
+                        [
+                            4
+                        ]
+                    ]
+                ],
+                "output_shape": [
+                    [
+                        4
+                    ]
+                ],
+                "num_parameters": [
+                    1200,
+                    4
+                ]
+            }
+        ],
+        "edges": []
+    },
+    "Average Score": 31.163349303444853,
+    "_runtime": 1759.0589470863342,
+    "_timestamp": 1574532884.4860544,
+    "_step": 129,
+    "Mean Score": 35.97649919586256
+}

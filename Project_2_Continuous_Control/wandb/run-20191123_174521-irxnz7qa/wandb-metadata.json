@@ -1,0 +1,25 @@
+{
+    "root": "/home/workspace",
+    "program": "<python with no main file>",
+    "codeSaved": true,
+    "startedAt": "2019-11-23T17:45:25.427107",
+    "host": "2f39af953e83",
+    "username": "root",
+    "executable": "/opt/conda/bin/python",
+    "os": "Linux-4.15.0-1041-gcp-x86_64-with-debian-stretch-sid",
+    "python": "3.6.3",
+    "gpu": "Tesla K80",
+    "gpu_count": 1,
+    "cpu_count": 4,
+    "cuda": "10.1.243",
+    "args": [
+        "-f",
+        "/root/.local/share/jupyter/runtime/kernel-ca93b471-8e24-4847-a996-384348bc9c64.json"
+    ],
+    "state": "running",
+    "jobType": null,
+    "mode": "run",
+    "name": "ruby-gorge-17",
+    "project": "udacity_deep-reinforcement-learning_project-2",
+    "heartbeatAt": "2019-11-23T18:14:45.269388"
+}
