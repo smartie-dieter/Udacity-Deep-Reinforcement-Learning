@@ -74,17 +74,17 @@ All the models, hyper-parameters and logs are visible via: [Weights and Biases](
 
 #### Project folder structure.
 - checkoints
- - The weights of the actor and cretic networks
+  - The weights of the actor and cretic networks
 - files
- - agent.py
- - model_actor.py
- - model_critic.py
- - ouNoise.py
- - replayBuffer.py
+  - agent.py
+  - model_actor.py
+  - model_critic.py
+  - ouNoise.py
+  - replayBuffer.py
 - images
- - images used in Continuous_Control.ipynb report
+  - images used in Continuous_Control.ipynb report
 - wandb
- - contains logging files
+  - contains logging files
 - Continuous_Control.ipynb (the report)
 - Continuous_Control.html  (the report)
 - hyper_parameters.json    (a json which contains the hyperparameters)
