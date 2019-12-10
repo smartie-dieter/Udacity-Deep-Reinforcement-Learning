@@ -1,0 +1,10 @@
+{"random_seed": 0, 
+ "learn_interval": 2, 
+ "learn_num": 1, 
+ "lr_actor": 0.0007308, 
+ "lr_critic": 0.0009657, 
+ "gamma": 0.99, 
+ "weight_decay": 0, 
+ "tau": 0.0283, 
+ "batch_size": 256, 
+ "buffer_size": 100000}
