@@ -54,11 +54,9 @@ All the models, hyper-parameters and logs are visible via: [Weights and Biases](
 
 
 
-table
 
 
-
-![](images/wandb_chart_24-11-2019_15_19_05.svg)
+![](images/wandb_10_12_2019_average_score.png)
 
 #### Project folder structure.
 - checkoints
@@ -70,11 +68,11 @@ table
   - ouNoise.py
   - replayBuffer.py
 - images
-  - images used in Continuous_Control.ipynb report
+  - images used in Tennis.ipynb report
 - wandb
   - contains logging files
-- Continuous_Control.ipynb (the report)
-- Continuous_Control.html  (the report)
+- Tennis.ipynb (the report)
+- Tennis.html  (the report)
 - hyper_parameters.json    (a json which contains the hyperparameters)
 
 #### Python dependencies
