@@ -39,17 +39,17 @@ The environment is considered solved, when the average (over 100 episodes) of th
 
 ### Instructions & Things to know
 
-Moste of the documentation is written in: `Continuous_Control(.ipynb|.html)`  
-Basically, this project starts at : `PROJECT 2: CONTINUOUS CONTROL!`  
-(Therefor you can skip the first 6 cells)  
+Moste of the documentation is written in: `Tennis(.ipynb|.html)`  
+Basically, this project starts at : `PROJECT 3: Collaboration and Competition!`  
+(Therefor you can skip the first cells)  
 
 #### How do you reproduce this project? 
-Run the `Continuous_Control.ipynb` from top till bottom to get started with training your own agent! 
+Run the `Tennis.ipynb` from top till bottom to get started with training your own agent! 
 
 #### my results:
 
-I managed to get an average score of +30 between the 36 and 60 steps. Depending on the configuration.  
-All the models, hyper-parameters and logs are visible via: [Weights and Biases](https://app.wandb.ai/verbeemen/udacity_deep-reinforcement-learning_project-2?workspace=user-verbeemen).   
+I managed to get an average score of +0.5 twice depending on the configuration.  
+All the models, hyper-parameters and logs are visible via: [Weights and Biases](https://app.wandb.ai/verbeemen/udacity_deep-reinforcement-learning_project-3?workspace=user-verbeemen).   
 (Weights and Biases is a developer tools for deep learning. By adding a couple lines of code, your training script is able to keep track of your hyperparameters, system metrics, and outputs so that you can compare experiments, see live graphs of training, and easily share your findings with colleagues.)
 
 
@@ -83,6 +83,7 @@ Python packages which were used in this project
 - pytorch
 - numpy
 - collections
+- bayesian-optimization
 - wandb
     
 
