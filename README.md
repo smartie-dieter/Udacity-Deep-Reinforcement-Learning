@@ -2,4 +2,4 @@
 This repo contains the projects which were required for the Undacities Deep Reinforcement Learning course.
 - Project 1: Navigation
 - Project 2: Continuous Control
-- Project 3: Tennis
+- Project 3: Collaboration and Competition
