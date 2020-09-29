@@ -50,7 +50,7 @@ et-xmlfile==1.0.1
 eventlet==0.22.0
 fastcache==1.0.2
 flask-socketio==2.9.2
-flask==0.12.2
+flask==1.0
 future==0.16.0
 gast==0.3.2
 gensim==3.4.0
