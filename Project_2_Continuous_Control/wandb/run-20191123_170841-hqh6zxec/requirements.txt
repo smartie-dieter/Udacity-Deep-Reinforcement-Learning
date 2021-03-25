@@ -172,7 +172,7 @@ python-socketio==1.8.4
 python-speech-features==0.6
 pytz==2017.3
 pywavelets==0.5.2
-pyyaml==3.12
+pyyaml==5.4
 pyzmq==17.1.2
 qtconsole==4.6.0
 requests-oauthlib==0.8.0
