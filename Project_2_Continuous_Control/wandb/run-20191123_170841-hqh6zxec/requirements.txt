@@ -94,7 +94,7 @@ librosa==0.5.1
 llvmlite==0.20.0
 locket==0.2.0
 lockfile==0.12.2
-lxml==4.1.1
+lxml==4.6.5
 mako==1.0.7
 markdown==2.6.9
 markupsafe==1.0
